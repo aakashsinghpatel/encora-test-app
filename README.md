@@ -2,7 +2,7 @@
 
 
 
-Step to run application:(On local)
+## Step to run application:(On local)
 
 1. Clone the repository on local.
 2. Install all dependancies: `npm insatll`.
@@ -13,7 +13,7 @@ Step to run application:(On local)
 
 
 
-Step to create build and deploy application (aws s3 bucket):
+## Step to create build and deploy application (aws s3 bucket):
 
 1. To create build: `ng build --prod`.
 2. Build files will be available in `/dist` folder.
