@@ -1,0 +1,21 @@
+<ng-template #content let-modal>
+  <ng-container class="content">
+    <div class="modal-header">
+      <h4 class="modal-title">Contact Details</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="closeModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <ng-content select=".content"> </ng-content>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="closeModal()">
+        Close
+      </button>
+    </div>
+  </ng-container>
+</ng-template>

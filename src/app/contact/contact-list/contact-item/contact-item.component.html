@@ -1,0 +1,9 @@
+<div *ngIf="data" class="item-container">
+  <div class="item firstName">{{ data['firstName'] }}</div>
+  <div class="item lastName">{{ data['lastName'] }}</div>
+  <div class="item phone">{{ data['phone'] }}</div>
+  <div class="item action">
+    <button class="delete" (click)="delete(data['id'])">Delete</button>
+    <button class="update" (click)="update(data)">Update</button>
+  </div>
+</div>

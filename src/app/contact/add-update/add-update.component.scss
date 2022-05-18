@@ -1,0 +1,18 @@
+.form-container {
+  .control-container {
+    margin: 10px;
+    .lable {
+      font-size: 15px;
+      color: blue;
+    }
+    .action button {
+      background-color: black;
+      color: white;
+    }    
+    .control-error {
+      font-size: 10px;
+      color: red;
+    }
+  }
+}
+

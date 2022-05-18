@@ -1,0 +1,26 @@
+.item-container {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px 10px 20px;
+  padding: 10px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  .item {
+    margin: 5px;
+  }
+  .action {
+    .delete {
+      background-color: red;
+      border-radius: 5px;
+      margin: 2px;
+    }
+    .update {
+      background-color: yellow;
+      border-radius: 5px;
+      margin: 2px;
+    }
+  }
+}
+

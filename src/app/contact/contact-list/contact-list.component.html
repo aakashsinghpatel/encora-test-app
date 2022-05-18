@@ -1,0 +1,32 @@
+<div class="contact-list-container">
+  <div *ngIf="contactData.length > 0; else loading">
+    <h1 class="heading">Contact Details</h1>
+    <div *ngFor="let contact of contactData">
+      <contact-item
+        [data]="contact"
+        (delete)="deleteItem($event)"
+        (update)="updateItem($event)"
+      >
+      </contact-item>
+    </div>
+
+    <div class="add-item-container">
+      <div class="btn-container add-item">
+        <button (click)="addItem()">Add Item</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading> loading.. </ng-template>
+
+  <app-modal [isOpen]="isModalOpen" (beforeDismiss)="closeModal()">
+    <ng-container class="content">
+      <div class="modal-body">
+        <add-update-contact
+          [data]="modalData"
+          (saveData)="addUpdateData($event)"
+        ></add-update-contact>
+      </div>
+    </ng-container>
+  </app-modal>
+</div>

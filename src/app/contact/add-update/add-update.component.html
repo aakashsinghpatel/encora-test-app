@@ -1,0 +1,61 @@
+<div *ngIf="data" class="form-container">
+  <form [formGroup]="addUpdateForm" (ngSubmit)="submitForm()">
+    <div class="control-container firstName">
+      <span class="lable" id="error">First Name: </span>
+      <div class="control">
+        <input formControlName="firstName" [(ngModel)]="data['firstName']" />
+      </div>
+      <div class="control-error">
+        <ng-container
+          *ngIf="isSubmit && addUpdateForm.controls['firstName'].invalid"
+          ><div *ngIf="addUpdateForm.controls['firstName'].errors?.required" >
+            Please enter first name
+          </div>
+          <div *ngIf="addUpdateForm.controls['firstName'].errors?.pattern">
+            Please enter valid first name
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="control-container lastName">
+      <span class="lable">Last Name: </span>
+      <div class="control">
+        <input formControlName="lastName" [(ngModel)]="data['lastName']" />
+      </div>
+      <div class="control-error">
+        <ng-container
+          *ngIf="isSubmit && addUpdateForm.controls['lastName'].invalid"
+          ><div *ngIf="addUpdateForm.controls['lastName'].errors?.required">
+            Please enter last name
+          </div>
+          <div *ngIf="addUpdateForm.controls['lastName'].errors?.pattern">
+            Please enter valid last name
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="control-container phone">
+      <span class="lable">Phone Number:</span>
+      <div class="control">
+        <input formControlName="phone" [(ngModel)]="data['phone']" />
+      </div>
+      <div class="control-error">
+        <ng-container *ngIf="isSubmit && addUpdateForm.controls['phone'].invalid">
+          <div *ngIf="addUpdateForm.controls['phone'].errors?.required">
+            Please enter mobile number
+          </div>
+          <div *ngIf="addUpdateForm.controls['phone'].errors?.pattern">
+            Mobile number is not 10 digit
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="control-container">
+      <div class="action">
+        <button type="submit">
+          {{ operation }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
