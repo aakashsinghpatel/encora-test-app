@@ -1,4 +1,4 @@
-# EncoraTestApp (Angular app to maintain contact info)
+# Encora contact management App (Angular app to maintain contact info)
 
 
 
