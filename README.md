@@ -1,4 +1,4 @@
-# Encora contact management App (Angular app to maintain contact info)
+# Encora:- User information (contact) management App (Angular app to maintain contact info)
 
 
 
