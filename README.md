@@ -19,4 +19,4 @@
 2. Build files will be available in `/dist` folder.
 3. Now upload it to S3 bucket.
 
-Referance: `https://levelup.gitconnected.com/learn-how-to-create-and-deploy-the-angular-application-to-aws-serverless-s3-81f8a838b563`
+Reference: `https://levelup.gitconnected.com/learn-how-to-create-and-deploy-the-angular-application-to-aws-serverless-s3-81f8a838b563`
